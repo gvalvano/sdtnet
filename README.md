@@ -9,19 +9,19 @@ Code (will be out soon!) for reproducing results in the paper:
  
 The overall block diagram of the SDTNet is the following:
 
-<img src="https://gitlab.com/gabriele_valvano/sdtnet/raw/master/results/images/SDTNet_block_diagram.png" alt="SDTNet_block_diagram" width="600"/>
+<img src="https://gitlab.com/gabriele_valvano/sdtnet---spatial-decomposition-and-transformation-network/raw/master/results/images/SDTNet_block_diagram.png" alt="SDTNet_block_diagram" width="600"/>
 
 ---------------------
 **Examples:**
 
 Anatomical factors extracted by the SDTNet from the image on the left:
 
-<img src="https://gitlab.com/gabriele_valvano/sdtnet/raw/master/results/images/decomposition.png" alt="SDTNet_block_diagram" width="600"/>
+<img src="https://gitlab.com/gabriele_valvano/sdtnet---spatial-decomposition-and-transformation-network/raw/master/results/images/decomposition.png" alt="SDTNet_block_diagram" width="600"/>
 
 <br/><br/>
 Predicted segmentations obtained from the UNet, SDNet, SDTNet after being trained with different percentages of the labelled data:
 
-<img src="https://gitlab.com/gabriele_valvano/sdtnet/raw/master/results/images/segmentations.png" alt="SDTNet_block_diagram" width="600"/>
+<img src="https://gitlab.com/gabriele_valvano/sdtnet---spatial-decomposition-and-transformation-network/raw/master/results/images/segmentations.png" alt="SDTNet_block_diagram" width="600"/>
 
 ---------------------
 
