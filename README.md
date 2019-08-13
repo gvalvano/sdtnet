@@ -1,8 +1,10 @@
 # Spatial Decomposition and Transformation Network (SDTNet)
 
+# Code will be out soon!
+
 **Tensorflow implementation of SDTNet**
 
-Code (will be out soon!) for reproducing results in the paper:
+Code for reproducing the results in the paper:
 
 > Valvano, G., Chartsias, A., Leo, A., & Tsaftaris, S. A.,  
 > *Temporal Consistency Objectives Regularize the Learning of Disentangled Representations*, MICCAI Workshop on Domain Adaptation and Representation Transfer, 2019.
