@@ -73,8 +73,7 @@ model.test_future_frames(input_data=x, checkpoint_dir=ckp_dir)
 ```
 Remember that, due to architectural constraints of the SDNet [*Chartsias et al. (2019)*,  [*k_code*](https://github.com/agis85/anatomy_modality_decomposition),  [*tf_code*](https://github.com/gvalvano/sdnet) ], the batch size that you used during training remains fixed at test time. 
 
----------------------
-**Results:**
+# Results:
 
 Anatomical factors extracted by the SDTNet from the image on the left:
 
