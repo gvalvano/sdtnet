@@ -23,7 +23,7 @@ he_init = tf.contrib.layers.variance_scaling_initializer(factor=2.0, mode='FAN_I
 b_init = tf.zeros_initializer()
 
 
-class FramePredictor(object):
+class Transformer(object):
 
     def __init__(self, n_channels, is_training, n_filters=16, name='FramePredictor'):
         """
