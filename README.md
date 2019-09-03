@@ -1,7 +1,5 @@
 # Spatial Decomposition and Transformation Network (SDTNet)
 
-# Code will be out soon!
-
 **Tensorflow implementation of SDTNet**
 
 Code for reproducing the results in the paper:
