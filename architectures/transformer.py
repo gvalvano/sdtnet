@@ -104,7 +104,8 @@ class Transformer(object):
             # add residual connection
             self.soft_output_frames = decoded_input + input_frames
 
-            output_frames = tf.nn.softmax(self.soft_output_frames)
+            # output_frames = tf.nn.softmax(self.soft_output_frames)
+            output_frames = self.soft_output_frames
 
             with tf.variable_scope('RoundingLayer'):
                 self.hard_output_frames = rounding_layer(output_frames)
