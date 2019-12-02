@@ -23,7 +23,7 @@ b_init = tf.zeros_initializer()
 
 class Decoder(object):
 
-    def __init__(self, z_factors, encoded_anatomy, n_channels, is_training, name='Decoder'):
+    def __init__(self, z_factors, encoded_anatomy, n_channels, is_training, output='tanh', name='Decoder'):
         """
         Decoder that generates an image by combining an anatomical and a modality representation.
         :param z_factors: (tensor) incoming tensor with the modality representation
@@ -32,6 +32,7 @@ class Decoder(object):
         :param is_training: (tf.placeholder(dtype=tf.bool) or bool) variable to define training or test mode; it is
                         needed for the behaviour of dropout, batch normalization, ecc. (which behave differently
                         at train and test time)
+        :param output: (string) output activation function, defaults to 'tanh' (according to original paper)
         :param name: (string) name scope for the unet
 
         - - - - - - - - - - - - - - - -
@@ -52,6 +53,9 @@ class Decoder(object):
         self.is_training = is_training
         self.name = name
 
+        assert output in ['linear', 'tanh']
+        self.output = output
+
         self.reconstruction = None
 
     def build(self):
@@ -67,6 +71,9 @@ class Decoder(object):
                 film4 = self._film_layer(film3, self.z_factors, scope='_film_layer_3')
 
             self.reconstruction = layers.conv2d(film4, filters=1, kernel_size=3, strides=1, padding='same')
+
+            if self.output == 'tanh':
+                self.reconstruction = tf.nn.tanh(self.reconstruction)
 
         return self
 
